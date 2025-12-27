@@ -1,0 +1,18 @@
+<h1>my name is {{name}}</h1>
+<h2> sum of a and b{{a+b}}</h2>
+<h3>sum{{c}}</h3>
+<h4>{{person.name}}</h4>
+<h4>{{person.age}}</h4>
+<h4>{{person.place}}</h4>
+<div>
+  <h2>Drinks Array:</h2>
+  <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; max-width: 600px;">
+    <div *ngFor="let drink of drinks; let i = index" style="border: 2px solid #333; padding: 15px; text-align: center; background-color: #f9f9f9;">
+      <h4>Index: {{ i }}</h4>
+      <h3>{{ drink.name }}</h3>
+      <img src="{{ drink.image }}" alt="{{ drink.name }}" width="180" height="120" style="border: 1px solid #ccc; display: block; margin: 10px auto;">
+      <p><strong>Name:</strong> {{ drink.name }}</p>
+      <p><strong>Type:</strong> Soft Drink</p>
+    </div>
+  </div>
+</div>
